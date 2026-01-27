@@ -20,7 +20,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   //retries: process.env.CI ? 2 : 0,
-  retries: 3,
+  retries: 0,
   /* Opt out of parallel tests on CI. */
   /*workers: process.env.CI ? 1 : undefined,*/
   workers: 2,
@@ -28,8 +28,8 @@ export default defineConfig({
 
 
   reporter: [
-    ['html', { outputFolder: '../reports/html-report', open: 'never' }],
-    ['allure-playwright', { outputFolder: '../reports/allure-results' }],
+    ['html'],
+    ['allure-playwright'],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 
@@ -42,7 +42,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    headless: false,
+    headless: true,
     ignoreHTTPSErrors: true, //ignores SSL Errors
     permissions:['geolocation','microphone'], //Accepts permissions for browser
   },
