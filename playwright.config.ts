@@ -42,9 +42,9 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    headless: true,
+    headless: false,
     ignoreHTTPSErrors: true, //ignores SSL Errors
-    permissions:['Geolocation','microphone'], //Accepts permissions for browser
+    permissions:['geolocation','microphone'], //Accepts permissions for browser
   },
   grep: /@Master/,
   /* Configure projects for major browsers */
@@ -54,7 +54,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+    /*{
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -63,7 +63,7 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-
+*/
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

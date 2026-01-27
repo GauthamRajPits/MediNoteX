@@ -15,11 +15,11 @@ export class LoginPage {
   constructor(page: Page) 
   {
     this.page = page;
-    this.emailInput = this.page.getByRole('textbox', { name: 'Email' });
-    this.passwordInput = this.page.getByRole('textbox', { name: 'Password' });
-    this.loginButton = this.page.getByRole('button', { name: 'Login' })
-    this.rememberMeCheckbox = this.page.getByRole('checkbox', { name: 'Remember me' })
-    this.forgotPasswordLink = this.page.getByRole('link', { name: 'Forgot Password?' })
+    this.emailInput = page.getByRole('textbox', { name: 'Email' });
+    this.passwordInput = page.getByRole('textbox', { name: 'Password' });
+    this.loginButton = page.getByRole('button', { name: 'Login' })
+    this.rememberMeCheckbox = page.getByRole('checkbox', { name: 'Remember me' })
+    this.forgotPasswordLink = page.getByRole('link', { name: 'Forgot Password?' })
   }
 
   //action methods
@@ -31,9 +31,13 @@ export class LoginPage {
 
   //Login Method
     async login(email:string, password:string) {
-    this.emailInput.fill(email);
-    this.passwordInput.fill(password);
-    this.loginButton.click();
+    //this.emailInput.click();
+    await this.emailInput.fill(email);
+    //await this.page.waitForTimeout(3000);
+    await this.passwordInput.fill(password);
+    //await this.page.waitForTimeout(3000);
+    await this.loginButton.click();
+    
   }
 }
 ////test
