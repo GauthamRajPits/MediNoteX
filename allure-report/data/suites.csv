@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1","Admin can login","firefox","2026-01-27","failed","2026-01-27","@Master - Admin Login Tests","adminLogin.spec.ts","",""
+"","7192","Admin can login","chromium","2026-01-28","passed","2026-01-28","@Master - Admin Login Tests","adminLogin.spec.ts","",""
+"","1","Admin can login","webkit","2026-01-27","failed","2026-01-27","@Master - Admin Login Tests","adminLogin.spec.ts","",""
