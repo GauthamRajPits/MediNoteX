@@ -10,14 +10,18 @@ test.beforeEach(async ({page})=>
   await page.goto('/login');
 });
 
-test.describe("Admin Login Tests", ()=>
+test.describe("@Regression - Admin Login Tests", ()=>
 {
   const testConfig = new TestConfig();
 
-  test("[@Regression] - Admin can login", async ({ page }) => {
+  test("Admin can login", async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.navigateToLoginPage();
     
     await loginPage.login(testConfig.adminEmail, testConfig.adminPassword);
+
+    await loginPage.verifyOtp();
+
+    await expect(page).toHaveTitle(/MediNoteX /);
   });
 });

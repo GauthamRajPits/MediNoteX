@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "RunRegression": "npx playwright test --grep @Regression --headed"
+    "RunRegression": "npx playwright test --grep @Regression --headed && allure generate allure-results --clean -o allure-report && allure open allure-report"
   },
   "keywords": [],
   "author": "",
@@ -11,7 +11,8 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.58.1",
-    "@types/node": "^25.0.10"
+    "@types/node": "^25.0.10",
+    "allure-commandline": "^2.36.0"
   },
   "dependencies": {
     "@faker-js/faker": "^10.2.0",
