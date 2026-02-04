@@ -10,11 +10,11 @@ test.beforeEach(async ({page})=>
   await page.goto('/login');
 });
 
-test.describe("@Master - Admin Login Tests", ()=>
+test.describe("Admin Login Tests", ()=>
 {
   const testConfig = new TestConfig();
 
-  test("Admin can login", async ({ page }) => {
+  test("[@Regression] - Admin can login", async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.navigateToLoginPage();
     

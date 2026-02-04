@@ -2,13 +2,15 @@
   "name": "medinotex",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "RunRegression": "npx playwright test --grep @Regression --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.57.0",
+    "@playwright/test": "^1.58.1",
     "@types/node": "^25.0.10"
   },
   "dependencies": {

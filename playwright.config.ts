@@ -46,7 +46,7 @@ export default defineConfig({
     ignoreHTTPSErrors: true, //ignores SSL Errors
     permissions:['geolocation','microphone'], //Accepts permissions for browser
   },
-  grep: /@Master/,
+  
   /* Configure projects for major browsers */
   projects: [
     {
